@@ -99,9 +99,10 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative flex flex-col items-center gap-8 max-w-xl">
-          <Image src="/finallylogo.png" alt="Wriggle" width={420} height={420} className="drop-shadow-2xl" />
+        <div className="relative flex flex-col items-center max-w-xl">
+          <Image src="/finallylogo.png" alt="Wriggle" width={378} height={378} className="drop-shadow-2xl mb-3" />
 
+          <div className="flex flex-col items-center gap-4 w-full">
           <div className="flex items-center gap-2 border border-white/15 rounded-full px-4 py-1.5 text-sm text-white/60 bg-white/5 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#E8547A" }} />
             Coming soon · iOS & Android · Free
@@ -120,6 +121,7 @@ export default function Home() {
             <p className="text-white/80 font-semibold">Get notified when we launch</p>
             <WaitlistForm />
             <p className="text-white/35 text-xs">No spam. One email when we go live.</p>
+          </div>
           </div>
         </div>
       </section>
