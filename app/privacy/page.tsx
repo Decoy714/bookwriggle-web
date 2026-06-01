@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Privacy Policy — BookWriggle",
-  description: "BookWriggle privacy policy — how we collect, use, and protect your data.",
+  title: "Privacy Policy — Wriggle",
+  description: "Wriggle privacy policy — how we collect, use, and protect your data.",
 };
 
 export default function PrivacyPage() {
@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       </nav>
 
       <article className="max-w-2xl mx-auto px-6 py-16 prose prose-stone">
-        <h1 className="font-[var(--font-playfair)] text-4xl font-black text-warm-text mb-2">Privacy Policy</h1>
+        <h1 className="font-[var(--font-playfair)] text-4xl font-black text-warm-text mb-2">Wriggle — Privacy Policy</h1>
         <p className="text-warm-muted text-sm mb-12">Last updated: 1 June 2025</p>
 
         <Section title="1. Who We Are">

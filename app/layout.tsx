@@ -11,20 +11,20 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Wriggle — Discover Books You'll Actually Love",
+  title: "Wriggle — A place for people who love books",
   description:
-    "Wriggle is the free book discovery app. Swipe through personalised picks, join reading clubs with friends, and buy with one tap. No subscription. No ads.",
-  keywords: ["book discovery", "reading app", "book clubs", "free books", "kindle", "wriggle"],
+    "Wriggle is a free app where book lovers connect. Get personal recommendations, chat with other readers, and build book clubs with your friends.",
+  keywords: ["book discovery", "reading app", "book clubs", "book lovers", "wriggle"],
   openGraph: {
-    title: "Wriggle — Discover Books You'll Actually Love",
-    description: "Swipe through personalised book picks, join reading clubs, and buy with one tap. Completely free.",
+    title: "Wriggle — A place for people who love books",
+    description: "Personal recommendations, reader chat, and book clubs. Completely free.",
     siteName: "Wriggle",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wriggle — Discover Books You'll Actually Love",
-    description: "The free book discovery app. Swipe. Save. Read.",
+    title: "Wriggle — A place for people who love books",
+    description: "A free app where book lovers connect.",
   },
 };
 
