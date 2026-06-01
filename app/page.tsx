@@ -100,7 +100,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative flex flex-col items-center gap-8 max-w-xl">
-          <Image src="/finallylogo.png" alt="Wriggle" width={280} height={280} className="drop-shadow-2xl" />
+          <Image src="/finallylogo.png" alt="Wriggle" width={420} height={420} className="drop-shadow-2xl" />
 
           <div className="flex items-center gap-2 border border-white/15 rounded-full px-4 py-1.5 text-sm text-white/60 bg-white/5 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#E8547A" }} />
