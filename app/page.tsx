@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 const FORMSPREE_ID = "mzdwljdr";
+const AMAZON_TAG = "bookwriggle05-21";
 
 const FEATURED_BOOKS = [
   {
@@ -221,7 +222,7 @@ export default function Home() {
             {FEATURED_BOOKS.map((book) => (
               <a
                 key={book.asin}
-                href={`https://www.amazon.co.uk/dp/${book.asin}?tag=bookwriggle05-21`}
+                href={`https://www.amazon.co.uk/dp/${book.asin}?tag=${AMAZON_TAG}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col rounded-2xl overflow-hidden border border-white/8 hover:border-white/20 transition-all duration-200"
@@ -266,7 +267,7 @@ export default function Home() {
           <p className="text-xs text-center leading-relaxed" style={{ color: "rgba(255,255,255,0.2)" }}>
             Wriggle is a participant in the Amazon Services LLC Associates Programme, an affiliate advertising programme
             designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.co.uk.
-            Associate tag: bookwriggle05-21.
+            Associate tag: {AMAZON_TAG}.
           </p>
           <p className="text-xs text-center" style={{ color: "rgba(255,255,255,0.15)" }}>
             © {new Date().getFullYear()} Wriggle. All rights reserved.
