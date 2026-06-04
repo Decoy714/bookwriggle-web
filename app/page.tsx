@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 const FORMSPREE_ID = "mzdwljdr";
-const AMAZON_TAG = "bookwriggle05-21";
+const AMAZON_TAG = "bookwriggle71-21";
 
 const FEATURED_BOOKS = [
   {
