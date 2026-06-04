@@ -5,6 +5,51 @@ import Image from "next/image";
 
 const FORMSPREE_ID = "mzdwljdr";
 
+const FEATURED_BOOKS = [
+  {
+    title: "Gone Girl",
+    author: "Gillian Flynn",
+    asin: "0307588378",
+    genre: "Thriller",
+    description: "Nick Dunne's wife disappears on their anniversary. What follows is one of the most compulsive, twist-laden thrillers ever written. You will not see it coming.",
+  },
+  {
+    title: "Dune",
+    author: "Frank Herbert",
+    asin: "0553103547",
+    genre: "Science Fiction",
+    description: "The greatest science fiction novel ever written. A sweeping tale of politics, religion, and survival on a desert planet that defined the genre and still towers above it.",
+  },
+  {
+    title: "Harry Potter and the Philosopher's Stone",
+    author: "J.K. Rowling",
+    asin: "0747532699",
+    genre: "Fantasy",
+    description: "The book that turned a generation into readers. A letter, a giant, a castle full of magic — and one of the most beloved stories in the history of publishing.",
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    asin: "0743273567",
+    genre: "Classic Fiction",
+    description: "Fitzgerald's portrait of the Jazz Age captures something permanent about ambition, longing, and the cost of chasing a dream that was never really there.",
+  },
+  {
+    title: "The Hitchhiker's Guide to the Galaxy",
+    author: "Douglas Adams",
+    asin: "0330513370",
+    genre: "Comedy Sci-Fi",
+    description: "Forty-two. The funniest, strangest, most quotable book in the galaxy. If you've never read it, stop everything — the universe is waiting.",
+  },
+  {
+    title: "The Lord of the Rings",
+    author: "J.R.R. Tolkien",
+    asin: "0618640150",
+    genre: "Fantasy",
+    description: "The foundation of modern fantasy. A journey from the Shire to the fires of Mount Doom that no other story has come close to matching in scale or heart.",
+  },
+];
+
 type FormStatus = "idle" | "loading" | "success" | "error";
 
 function WaitlistForm() {
@@ -164,6 +209,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Books We Love */}
+      <section className="px-6 py-24 border-t" style={{ backgroundColor: "#0D0A08", borderColor: "rgba(255,255,255,0.06)" }}>
+        <div className="max-w-3xl mx-auto">
+          <p className="font-[var(--font-playfair)] text-3xl md:text-4xl text-white mb-3 text-center">Books worth reading</p>
+          <p className="text-center text-white/50 text-sm mb-14 leading-relaxed">
+            A handpicked selection from our team — the books that made us think, feel, and stay up far too late.
+            All available on Amazon UK.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {FEATURED_BOOKS.map((book) => (
+              <a
+                key={book.asin}
+                href={`https://www.amazon.co.uk/dp/${book.asin}?tag=bookwriggle05-21`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col rounded-2xl overflow-hidden border border-white/8 hover:border-white/20 transition-all duration-200"
+                style={{ backgroundColor: "#1A1208" }}
+              >
+                <div className="w-full aspect-[2/3] overflow-hidden bg-white/5 flex items-center justify-center">
+                  <img
+                    src={`https://covers.openlibrary.org/b/isbn/${book.asin}-M.jpg`}
+                    alt={book.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => { (e.target as HTMLImageElement).src = `https://images-na.ssl-images-amazon.com/images/P/${book.asin}.01.MZZZZZZZ.jpg`; }}
+                  />
+                </div>
+                <div className="p-5 flex flex-col gap-2 flex-1">
+                  <span className="text-xs font-semibold tracking-wide uppercase" style={{ color: "#E8547A" }}>{book.genre}</span>
+                  <h3 className="font-[var(--font-playfair)] text-white font-bold text-lg leading-snug">{book.title}</h3>
+                  <p className="text-white/50 text-xs font-medium">{book.author}</p>
+                  <p className="text-white/60 text-sm leading-relaxed flex-1 mt-1">{book.description}</p>
+                  <span className="mt-3 text-xs font-semibold text-white/40 group-hover:text-white/70 transition-colors">
+                    View on Amazon →
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+          <p className="text-center text-white/25 text-xs mt-10 leading-relaxed">
+            As an Amazon Associate, Wriggle earns from qualifying purchases. Prices and availability are subject to change.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t px-6 py-10" style={{ borderColor: "rgba(255,255,255,0.06)", backgroundColor: "#0D0A08" }}>
         <div className="max-w-3xl mx-auto space-y-5">
@@ -175,8 +264,9 @@ export default function Home() {
             <a href="mailto:tracksuitgoth@gmail.com" className="hover:text-white transition-colors">Contact</a>
           </div>
           <p className="text-xs text-center leading-relaxed" style={{ color: "rgba(255,255,255,0.2)" }}>
-            Wriggle is a participant in the Amazon Services LLC Associates Programme.
-            Amazon Associate tag: bookwriggle-21.
+            Wriggle is a participant in the Amazon Services LLC Associates Programme, an affiliate advertising programme
+            designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.co.uk.
+            Associate tag: bookwriggle05-21.
           </p>
           <p className="text-xs text-center" style={{ color: "rgba(255,255,255,0.15)" }}>
             © {new Date().getFullYear()} Wriggle. All rights reserved.
