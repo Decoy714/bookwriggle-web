@@ -20,7 +20,7 @@ export default function PrivacyPage() {
       {/* Content */}
       <article className="max-w-2xl mx-auto px-6 py-16 flex-1 w-full">
         <h1 className="font-[var(--font-playfair)] text-4xl font-black text-white mb-2">Privacy Policy</h1>
-        <p className="text-sm mb-12" style={{ color: "rgba(255,255,255,0.4)" }}>Last updated: 1 June 2025</p>
+        <p className="text-sm mb-12" style={{ color: "rgba(255,255,255,0.4)" }}>Last updated: 10 June 2026</p>
 
         <Section title="1. Who We Are">
           <p>Wriggle (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is a free book discovery app. This Privacy Policy explains what personal data we collect, how we use it, and your rights.</p>
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
           <h3>Reading Activity</h3>
           <p>Books you have liked or saved, books you have marked as read, and your genre and rating preferences.</p>
           <h3>User-Generated Content</h3>
-          <p>Book reviews and ratings, comments and replies, and direct messages sent between users.</p>
+          <p>Book reviews and ratings, comments and replies, direct messages sent between users, and book club names, descriptions, and activity.</p>
           <h3>Technical Data</h3>
           <p>Device type and operating system, and app usage analytics (crash reports, performance data) collected automatically by Firebase.</p>
         </Section>
